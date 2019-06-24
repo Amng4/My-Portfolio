@@ -1,0 +1,7 @@
+h1{
+    text-align: center;
+    font-size: 40px
+}
+body {
+    background: linear-gradient(to bottom, #ffff99 0%, #99ccff 100%);
+}
