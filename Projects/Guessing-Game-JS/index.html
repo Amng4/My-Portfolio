@@ -1,28 +1,10 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-    <meta charset="utf-8"> 
-    <title>Number Guessing Game</title> 
-  
-    <style> 
-        html { 
-    font-family: sans-serif; 
-    } 
-      
-        body { 
-    width: 50%; 
-    max-width: 800px; 
-    min-width: 480px; 
-    margin: 0 auto; 
-    } 
-    </style> 
 </head> 
-  
-<body> 
+  <body> 
 <h1>Guess The Number</h1> 
-  
-<p>We have selected a random number between 1 - 20.  
-See if you can guess it.</p> 
+  <p>Guess a number between 1-20</p> 
   
 <div class="form"> 
     <label for="guessField">Enter a guess: </label> 
@@ -32,34 +14,23 @@ See if you can guess it.</p>
 </div> 
   
 <script type = "text/javascript"> 
-  
-    // random value generated 
-    var y = 8 ; 
-      
-    // counting the number of guesses 
-    // made for correct Guess 
+    var y = Math.floor(Math.random() * 20) + 1;
     var guess = 3; 
-      
-    document.getElementById("submitguess").onclick = function(){ 
-      
-   // number guessed by user      
+      document.getElementById("submitguess").onclick = function(){     
    var x = document.getElementById("guessField").value; 
-  
-   if(x == y) 
+  if(x == y) 
    {     
-       alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
-               + guess + " GUESS "); 
+       alert("Congradulations, you have guessed correctly!!"); 
    } 
-   else if(x > y) /* if guessed number is greater 
-                   than actual number*/ 
+   else if(x > y)
    {     
        guess++; 
-       alert("OOPS SORRY!! TRY A SMALLER NUMBER"); 
+       alert("Your number is too big. Try again."); 
    } 
    else
    { 
        guess++; 
-       alert("OOPS SORRY!! TRY A GREATER NUMBER") 
+       alert("Your number is too small. Try again.") 
    } 
 } 
 </script> 
